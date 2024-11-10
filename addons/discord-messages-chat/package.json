@@ -1,0 +1,15 @@
+{
+  "name": "discord-messages-chat",
+  "description": "Relay in-game chats to Discord.",
+  "version": "0.1.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "st-little",
+  "license": "MIT",
+  "dependencies": {
+    "@minecraft/server": "^1.16.0-beta.1.21.44-stable",
+    "@minecraft/server-net": "^1.0.0-beta.1.21.50-preview.28"
+  }
+}
