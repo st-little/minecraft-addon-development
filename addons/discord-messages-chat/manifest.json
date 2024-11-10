@@ -1,0 +1,42 @@
+{
+    "format_version": 2,
+    "header": {
+        "name": "Discord Messages Chat",
+        "description": "Relay in-game chats to Discord.",
+        "uuid": "b2797545-64ea-47ac-8cfa-1c7e8ce7ac4b",
+        "version": [
+            0,
+            1,
+            0
+        ],
+        "min_engine_version": [
+            1,
+            21,
+            43
+        ]
+    },
+    "modules": [
+        {
+            "description": "Script resources",
+            "language": "javascript",
+            "type": "script",
+            "uuid": "69d75dd0-3db4-4577-823d-35af95605a46",
+            "version": [
+                0,
+                1,
+                0
+            ],
+            "entry": "scripts/main.js"
+        }
+    ],
+    "dependencies": [
+        {
+            "module_name": "@minecraft/server",
+            "version": "1.16.0-beta"
+        },
+        {
+            "module_name": "@minecraft/server-net",
+            "version": "1.0.0-beta"
+        }
+    ]
+}
