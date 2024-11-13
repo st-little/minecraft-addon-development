@@ -11,7 +11,8 @@
   "author": "st-little",
   "license": "MIT",
   "workspaces": [
-    "addons/discord-messages-chat"
+    "addons/discord-messages-chat",
+    "addons/dead-position-notification"
   ],
   "devDependencies": {
     "@minecraft/core-build-tasks": "^1.1.4",

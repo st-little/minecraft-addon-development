@@ -1,0 +1,16 @@
+{
+  "name": "dead-position-notification",
+  "version": "0.1.0",
+  "description": "Notification the position where the player died.",
+  "main": "index.js",
+  "scripts": {
+    "lint": "just-scripts lint",
+    "build": "just-scripts build"
+  },
+  "author": "st-little",
+  "license": "MIT",
+  "dependencies": {
+    "@minecraft/server": "^1.16.0-beta.1.21.44-stable",
+    "@minecraft/vanilla-data": "^1.21.44"
+  }
+}
