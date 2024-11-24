@@ -1,0 +1,30 @@
+{
+    "format_version": 2,
+    "header": {
+        "name": "Favorite music disc",
+        "description": "Change the music disc to music of your choice.",
+        "uuid": "2fb8af94-b8d3-4f6b-a69f-3f6e1f5ab18f",
+        "version": [
+            1,
+            0,
+            0
+        ],
+        "min_engine_version": [
+            1,
+            21,
+            43
+        ]
+    },
+    "modules": [
+        {
+            "description": "Change the music disc to music of your choice.",
+            "type": "resources",
+            "uuid": "51f269a9-a40a-496b-99cb-0a9473487a5d",
+            "version": [
+                1,
+                0,
+                0
+            ]
+        }
+    ]
+}

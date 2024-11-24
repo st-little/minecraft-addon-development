@@ -131,3 +131,6 @@ dist
 
 # Bedrock Dedicated Server
 bedrock-dedicated-server/
+
+# Minecraft sound files
+*.ogg
