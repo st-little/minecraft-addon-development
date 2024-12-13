@@ -5,8 +5,8 @@
         "description": "Notification the position where the player died.",
         "uuid": "7c56a920-56e8-4b79-bbee-ec1ba22a6597",
         "version": [
-            0,
             1,
+            0,
             0
         ],
         "min_engine_version": [
@@ -22,8 +22,8 @@
             "type": "script",
             "uuid": "1e0a1fc4-5c6d-4488-a53d-a83156f5c494",
             "version": [
-                0,
                 1,
+                0,
                 0
             ],
             "entry": "scripts/main.js"
@@ -32,7 +32,7 @@
     "dependencies": [
         {
             "module_name": "@minecraft/server",
-            "version": "1.16.0-beta"
+            "version": "1.16.0"
         }
     ]
 }
