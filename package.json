@@ -12,7 +12,8 @@
   "license": "MIT",
   "workspaces": [
     "addons/discord-messages-chat",
-    "addons/dead-position-notification"
+    "addons/dead-position-notification",
+    "addons/block-chairs"
   ],
   "devDependencies": {
     "@minecraft/core-build-tasks": "^1.1.4",

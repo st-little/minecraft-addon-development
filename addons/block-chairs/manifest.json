@@ -1,0 +1,46 @@
+{
+    "format_version": 2,
+    "header": {
+        "name": "Block Chairs",
+        "description": "This add-on allows the player to sit on the block.",
+        "uuid": "82bb4786-7e32-4e74-acde-d963b721ff83",
+        "version": [
+            0,
+            1,
+            0
+        ],
+        "min_engine_version": [
+            1,
+            21,
+            43
+        ]
+    },
+    "modules": [
+        {
+            "description": "Script resources",
+            "language": "javascript",
+            "type": "script",
+            "uuid": "475d1218-5eca-43bb-9ec9-80d124b2f7bd",
+            "version": [
+                0,
+                1,
+                0
+            ],
+            "entry": "scripts/main.js"
+        }
+    ],
+    "dependencies": [
+        {
+            "module_name": "@minecraft/server",
+            "version": "1.17.0-beta"
+        },
+        {
+            "uuid": "9890323f-c6a6-408a-8887-f88c272694ac",
+            "version": [
+                0,
+                1,
+                0
+            ]
+        }
+    ]
+}

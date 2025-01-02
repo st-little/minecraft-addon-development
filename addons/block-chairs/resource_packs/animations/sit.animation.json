@@ -1,0 +1,55 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.blockchairs.sit": {
+			"loop": true,
+			"bones": {
+				"RightArm": {
+					"rotation": [
+						-22.5,
+						0,
+						0
+					]
+				},
+				"LeftArm": {
+					"rotation": [
+						-22.5,
+						0,
+						0
+					]
+				},
+				"RightLeg": {
+					"rotation": [
+						-90,
+						22.5,
+						0
+					],
+					"position": [
+						0,
+						-10,
+						0
+					]
+				},
+				"LeftLeg": {
+					"rotation": [
+						-90,
+						-22.5,
+						0
+					],
+					"position": [
+						0,
+						-10,
+						0
+					]
+				},
+				"Body": {
+					"position": [
+						0,
+						-10,
+						0
+					]
+				}
+			}
+		}
+	}
+}
