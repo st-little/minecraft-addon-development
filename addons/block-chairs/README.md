@@ -15,8 +15,6 @@ Supported Blocks
    npx tsc
    ```
 
-1. Overwrite the WEBHOOK_URL in `./dist/main.js` with the discord's Webhook URL.
-
 1. Copy the add-on to the `worlds/Bedrock level/behavior_packs` folder on the server.
 
    - worlds/Bedrock level/behavior_packs
