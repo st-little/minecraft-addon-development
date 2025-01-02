@@ -1,0 +1,44 @@
+{
+    "format_version": 2,
+    "header": {
+        "name": "Block Chairs RP",
+        "description": "Resource pack for Block Chairs.",
+        "uuid": "9890323f-c6a6-408a-8887-f88c272694ac",
+        "version": [
+            0,
+            1,
+            0
+        ],
+        "min_engine_version": [
+            1,
+            21,
+            43
+        ]
+    },
+    "modules": [
+        {
+            "description": "Resource pack for Block Chairs.",
+            "type": "resources",
+            "uuid": "c39778da-5036-437b-8b46-e77d3329e424",
+            "version": [
+                0,
+                1,
+                0
+            ]
+        }
+    ],
+    "dependencies": [
+        {
+            "module_name": "@minecraft/server",
+            "version": "1.17.0-beta"
+        },
+        {
+            "uuid": "82bb4786-7e32-4e74-acde-d963b721ff83",
+            "version": [
+                0,
+                1,
+                0
+            ]
+        }
+    ]
+}
