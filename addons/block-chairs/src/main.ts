@@ -1,4 +1,10 @@
-import { world, ChatSendBeforeEvent } from "@minecraft/server";
+import { world, ChatSendBeforeEvent, Player } from "@minecraft/server";
+
+/**
+ * sit : Sit with your hands down and your legs open to the left or right.
+ * sit2: Sit with your hands down and legs closed.
+ */
+type SitType = "sit" | "sit2";
 
 function isSlabBlock(blockTypeId: string): boolean {
   const regex = /^minecraft:.*_slab$/;
@@ -18,6 +24,47 @@ function isSupportedBlock(blockTypeId: string): boolean {
   return false;
 }
 
+function sitPlayer(player: Player, sitType: SitType = "sit") {
+  const blockRaycastHit = player.getBlockFromViewDirection({
+    maxDistance: 4,
+  });
+  if (!blockRaycastHit) {
+    player.sendMessage("No block in view direction.");
+    return;
+  }
+
+  if (!isSupportedBlock(blockRaycastHit.block.typeId)) {
+    player.sendMessage("Block is not supported.");
+    return;
+  }
+
+  player.sendMessage("!stand command to stand up.");
+
+  player.runCommandAsync(
+    `inputpermission set ${player.name} movement disabled`
+  );
+
+  player.runCommandAsync(`tp ${player.name} ~ ~ ~ ~180`);
+
+  player.runCommandAsync(
+    `tp ${player.name} ${blockRaycastHit.block.x} ${
+      blockRaycastHit.block.y + 0.5
+    } ${blockRaycastHit.block.z}`
+  );
+
+  player.runCommandAsync(
+    `playanimation ${player.name} animation.blockchairs.${sitType} animation.blockchairs.${sitType} 0`
+  );
+}
+
+function standPlayer(player: Player) {
+  player.runCommandAsync(
+    `playanimation ${player.name} animation.player.sneaking e 0`
+  );
+
+  player.runCommandAsync(`inputpermission set ${player.name} movement enabled`);
+}
+
 function chatSendBeforeEventHandler(e: ChatSendBeforeEvent) {
   const player = e.sender;
 
@@ -25,48 +72,19 @@ function chatSendBeforeEventHandler(e: ChatSendBeforeEvent) {
     case "!sit":
       e.cancel = true;
 
-      const blockRaycastHit = player.getBlockFromViewDirection({
-        maxDistance: 2,
-      });
-      if (!blockRaycastHit) {
-        player.sendMessage("No block in view direction.");
-        break;
-      }
+      sitPlayer(player);
 
-      if (!isSupportedBlock(blockRaycastHit.block.typeId)) {
-        player.sendMessage("Block is not supported.");
-        break;
-      }
+      break;
+    case "!sit2":
+      e.cancel = true;
 
-      player.sendMessage("!stand command to stand up.");
-
-      player.runCommandAsync(
-        `inputpermission set ${player.name} movement disabled`
-      );
-
-      player.runCommandAsync(`tp ${player.name} ~ ~ ~ ~180`);
-
-      player.runCommandAsync(
-        `tp ${player.name} ${blockRaycastHit.block.x} ${
-          blockRaycastHit.block.y + 0.5
-        } ${blockRaycastHit.block.z}`
-      );
-
-      player.runCommandAsync(
-        `playanimation ${player.name} animation.blockchairs.sit animation.blockchairs.sit 0`
-      );
+      sitPlayer(player, "sit2");
 
       break;
     case "!stand":
       e.cancel = true;
 
-      player.runCommandAsync(
-        `playanimation ${player.name} animation.player.sneaking e 0`
-      );
-
-      player.runCommandAsync(
-        `inputpermission set ${player.name} movement enabled`
-      );
+      standPlayer(player);
 
       break;
     default:
