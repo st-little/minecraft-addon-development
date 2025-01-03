@@ -58,7 +58,9 @@ Supported Blocks
 ## Chat Commands
 
 - !sit
-  - Sit on the block.
+  - Sit on the block with your hands down and legs open to the left or right.
+- !sit2
+  - Sit on the block with your hands down and legs closed.
 - !stand
   - Stand up.
 
